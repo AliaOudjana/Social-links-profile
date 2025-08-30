@@ -36,13 +36,3 @@ html, .dark-theme{
 html.light-theme{
     @include u.light-theme;
 }
-
-@media screen and (prefers-color-scheme: light) {
-    html, .light-theme{
-        @include u.light-theme;
-    }
-
-    html.dark-theme{
-        @include u.dark-theme;
-    }
-}
