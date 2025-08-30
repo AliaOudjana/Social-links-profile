@@ -11,12 +11,7 @@ function setDarkTheme(){
     html_element.classList.add("dark-theme");
 }
 
-// If the user prefers light theme
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    theme_switch.checked = true;
-}
-
-// Keep watching for changes
+// Watch for preference changes
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     const newColorScheme = event.matches ? "dark" : "light";
     if(newColorScheme === "light"){
@@ -52,4 +47,5 @@ switch_label.addEventListener("keydown", (event) => {
             theme_switch.checked = true;
         }
     }
+
 });
