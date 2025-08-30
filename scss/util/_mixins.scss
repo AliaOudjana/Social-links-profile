@@ -1,0 +1,55 @@
+@mixin circular{
+    border-radius: 50%;
+    border: none;
+}
+
+@mixin rounded{
+    border-radius: 1rem;
+    border: none;
+}
+
+@mixin light-theme{
+    --text-color: var(--text-light);
+    --bg-color: var(--bg-light);
+    --card-color: var(--card-light);
+    --button-color: var(--button-light);
+    --accent-color: var(--accent-light);
+    .light-mode-logo{
+        display: none;
+    }
+    .dark-mode-logo{
+        display: block;
+    }
+}
+
+@mixin dark-theme{
+    --text-color: var(--text-dark);
+    --bg-color: var(--bg-dark);
+    --card-color: var(--card-dark);
+    --button-color: var(--button-dark);
+    --accent-color: var(--accent-dark);
+    .dark-mode-logo{
+        display: none;
+    }
+    .light-mode-logo{
+        display: block;
+    }
+}
+
+@mixin tablet{
+    @media (801px > width >= 480px){
+        @content;
+    }
+}
+
+@mixin laptop{
+    @media (1281px > width >= 801px){
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (width >= 1281px){
+        @content;
+    }
+}
